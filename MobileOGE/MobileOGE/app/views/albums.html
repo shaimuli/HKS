@@ -41,6 +41,11 @@
             <a style="text-align: right;font-size: 1.6em" id="lnkandrandrTechnic" href="http://delek-hks.co.il/andrTechnic" data-rel="dialog" onclick="lnkandrTechnic_Click();" data-ajax=" false"><i class='fa fa-align-left'></i> דווח קריאות שירות</a>
         </div>
     </div>
+    <div class="album">
+        <div>
+            <a style="text-align: right;font-size: 1.6em" id="lnkandrandrOrders" href="http://delek-hks.co.il/andrOrders" data-rel="dialog" onclick="lnkandrOrders_Click();" data-ajax=" false"><i class='fa fa-align-left'></i> הזמנת סולר</a>
+        </div>
+    </div>
     <br />
 
 
@@ -72,19 +77,21 @@
                     $("#lnkandrCounter").text("דיווח מונים ומלאי");
                     $("#lnkandrManualReport").text("דווח תדלוקים ידניים");
                     $("#lnkandrandrTechnic").text("דווח קריאות שירות");
-
+                    $("#lnkandrandrOrders").text("הזמנת סולר");
                     break;
                 case "ru-RU":
                     $("#lnkandr").text("Отчет доставки топлива");
                     $("#lnkandrCounter").text("Отчет доставки топлива");
                     $("#lnkandrManualReport").text("Отчет доставки топлива");
                     $("#lnkandrandrTechnic").text("דווח קריאות שירות");
+                    $("#lnkandrandrOrders").text("הזמנת סולר");
                     break;
                 case "en-US":
                     $("#lnkandr").text("Report Fuel Supplier");
                     $("#lnkandrCounter").text("Report Counter");
                     $("#lnkandrManualReport").text("Report Manual Fuel");
                     $("#lnkandrandrTechnic").text("Report Calling Service");
+                    $("#lnkandrandrOrders").text("הזמנת סולר");
                     break;
             }
 
@@ -95,6 +102,8 @@
     var hreflnkandrCounter = $('#lnkandrCounter').attr('href');
     var hreflnkandrManualReport = $('#lnkandrManualReport').attr('href');
     var hreflnkandrandrTechnic = $('#lnkandrandrTechnic').attr('href');
+    var hreflnkandrandrOrders = $('#lnkandrandrOrders').attr('href');
+   
     $("#slider-1").on('change', function (event) {
         slider_value = $("#slider-1").val();
         switch (slider_value) {
@@ -103,18 +112,21 @@
                 $("#lnkandrCounter").text("דיווח מונים ומלאי");
                 $("#lnkandrManualReport").text("דווח תדלוקים ידניים");
                 $("#lnkandrandrTechnic").text("דווח קריאות שירות");
+                $("#lnkandrandrOrders").text("הזמנת סולר");
                 break;
             case "ru-RU":
                 $("#lnkandr").text("Отчет доставки топлива");
                 $("#lnkandrCounter").text("Отчет доставки топлива");
                 $("#lnkandrManualReport").text("Отчет доставки топлива");
                 $("#lnkandrandrTechnic").text("דווח קריאות שירות");
+                $("#lnkandrandrOrders").text("הזמנת סולר");
                 break;
             case "en-US":
                 $("#lnkandr").text("Report Fuel Supplier");
                 $("#lnkandrCounter").text("Report Counter");
                 $("#lnkandrManualReport").text("Report Manual Fuel");
                 $("#lnkandrandrTechnic").text("Report Calling Service");
+                $("#lnkandrandrOrders").text("הזמנת סולר");
                 break;
         }
         slider_value = $("#slider-1").val();
@@ -122,6 +134,7 @@
         document.getElementById("lnkandrCounter").setAttribute("href", hreflnkandrCounter + "?lang=" + slider_value);
         document.getElementById("lnkandrManualReport").setAttribute("href", hreflnkandrManualReport + "?lang=" + slider_value);
         document.getElementById("lnkandrandrTechnic").setAttribute("href", hreflnkandrandrTechnic + "?lang=" + slider_value);
+        document.getElementById("lnkandrandrOrders").setAttribute("href", hreflnkandrandrOrders + "?lang=" + slider_value);
         //$("#slider-1").slider('refresh');
     });
     function lnkandr_Click() {
@@ -143,5 +156,11 @@
         var hreflnkandrManualReport = $('#lnkandrManualReport').attr('href');
         slider_value = $("#slider-1").val();
         document.getElementById("lnkandrManualReport").setAttribute("href", hreflnkandrManualReport + "?lang=" + slider_value);
+    }
+
+    function lnkandrOrders_Click() {
+        var hreflnkandrManualReport = $('#lnkandrOrders').attr('href');
+        slider_value = $("#slider-1").val();
+        document.getElementById("lnkandrOrders").setAttribute("href", hreflnkandrOrders + "?lang=" + slider_value);
     }
 </script>
